@@ -1,8 +1,9 @@
-//
-//  .swiftlint.yml
-//  Blog
-//
-//  Created by Wahid Hidayat on 03/01/22.
-//
+disabled_rules: # rule identifiers to exclude from running
+- trailing_whitespace
+- identifier_name
+- function_parameter_count
 
-import Foundation
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Blog/App
+- Blog/SupportingFiles
+- Pods
