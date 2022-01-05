@@ -56,6 +56,14 @@ extension AlbumTableViewCell: UICollectionViewDataSource {
 extension AlbumTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("albumId: \(photos[indexPath.row].albumId)")
+        
+        // get DetailUserViewController navigationController
+        let navCon = self.window?.rootViewController as? UINavigationController
+        if let detailUserVC = navCon?.viewControllers[2] as? DetailUserViewController {
+            let detailPhotoVM = DetailPhotoViewModel(photo: photos[indexPath.row])
+            let detailPhotoVC = DetailPhotoViewController(viewModel: detailPhotoVM)
+            detailUserVC.navigationController?.pushViewController(detailPhotoVC, animated: true)
+        }
     }
 }
 

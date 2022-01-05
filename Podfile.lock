@@ -2,27 +2,23 @@ PODS:
   - Alamofire (5.5.0)
   - Kingfisher (7.1.2)
   - SwiftLint (0.45.1)
-  - TPKeyboardAvoiding (1.3.5)
 
 DEPENDENCIES:
   - Alamofire (~> 5.5)
   - Kingfisher (~> 7.0)
   - SwiftLint
-  - TPKeyboardAvoiding
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
     - SwiftLint
-    - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
-  TPKeyboardAvoiding: d55b3ea7b362540af8fcf36aa3ed2e87bf210cc6
 
-PODFILE CHECKSUM: c1b055e803d8d209e7c3d9677b074046ec93b728
+PODFILE CHECKSUM: 33ee5c63e394ecec6d575d5804c71b91a196319d
 
 COCOAPODS: 1.10.1

@@ -94,5 +94,6 @@ extension DetailPostViewController: UITableViewDataSource {
 extension DetailPostViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        print("postId: \(viewModel.comments.value[indexPath.row].postId)")
     }
 }

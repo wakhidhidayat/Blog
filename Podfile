@@ -9,5 +9,4 @@ target 'Blog' do
   pod 'SwiftLint'
   pod 'Alamofire', '~> 5.5'
   pod 'Kingfisher', '~> 7.0'
-  pod 'TPKeyboardAvoiding'
 end
