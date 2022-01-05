@@ -51,4 +51,30 @@ class NetworkService {
                 }
             }
     }
+    
+    func getAlbums(completion: @escaping (Result<[Album], Error>) -> Void) {
+        AF.request(Endpoints.getAlbums.url, method: .get, headers: ApiCall.nonAuthHeaders)
+            .validate()
+            .responseDecodable(of: [Album].self) { response in
+                switch response.result {
+                case .success(let result):
+                    completion(.success(result))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
+    
+    func getPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
+        AF.request(Endpoints.getPhotos.url, method: .get, headers: ApiCall.nonAuthHeaders)
+            .validate()
+            .responseDecodable(of: [Photo].self) { response in
+                switch response.result {
+                case .success(let result):
+                    completion(.success(result))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }

@@ -19,12 +19,16 @@ enum Endpoints {
     case getPosts
     case getUser(id: Int)
     case getComments
+    case getAlbums
+    case getPhotos
     
     var url: String {
         switch self {
         case .getPosts: return "\(ApiCall.baseUrl)posts"
         case .getUser(let id): return "\(ApiCall.baseUrl)users/\(id)"
         case .getComments: return "\(ApiCall.baseUrl)comments"
+        case .getAlbums: return "\(ApiCall.baseUrl)albums"
+        case .getPhotos: return "\(ApiCall.baseUrl)photos"
         }
     }
 }

@@ -70,7 +70,9 @@ class DetailPostViewController: UIViewController {
     }
     
     @IBAction func userButtonAction(_ sender: UIButton) {
-        // todo
+        let detailUserVM = DetailUserViewModel(userId: post.userId)
+        let detailUserVC = DetailUserViewController(viewModel: detailUserVM, userId: post.userId)
+        navigationController?.pushViewController(detailUserVC, animated: true)
     }
 }
 
@@ -86,10 +88,6 @@ extension DetailPostViewController: UITableViewDataSource {
         ) as? CommentTableViewCell
         cell?.configure(with: viewModel.comments.value[indexPath.row])
         return cell ?? UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Comments"
     }
 }
 
