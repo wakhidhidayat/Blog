@@ -20,4 +20,5 @@ struct PostList: Decodable {
     let body: String
     let user: String
     let company: String
+    let userId: Int
 }

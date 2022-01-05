@@ -85,5 +85,11 @@ extension PostViewController: UITableViewDataSource {
 extension PostViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let detailPostVM = DetailPostViewModel(postId: viewModel.listPost.value[indexPath.row].id)
+        let detailPostVC = DetailPostViewController(
+            viewModel: detailPostVM,
+            post: viewModel.listPost.value[indexPath.row]
+        )
+        navigationController?.pushViewController(detailPostVC, animated: true)
     }
 }

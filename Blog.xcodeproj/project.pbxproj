@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E67A52A27848634007B196A /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E67A52827848634007B196A /* DetailPostViewController.swift */; };
+		3E67A52B27848634007B196A /* DetailPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E67A52927848634007B196A /* DetailPostViewController.xib */; };
+		3E67A52E27849218007B196A /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E67A52C27849218007B196A /* CommentTableViewCell.swift */; };
+		3E67A52F27849218007B196A /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E67A52D27849218007B196A /* CommentTableViewCell.xib */; };
+		3E67A5332784986F007B196A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E67A5322784986F007B196A /* Comment.swift */; };
+		3E67A53727849BE4007B196A /* DetailPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E67A53627849BE4007B196A /* DetailPostViewModel.swift */; };
 		3EC8A68827831A47009D66A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC8A68727831A47009D66A2 /* AppDelegate.swift */; };
 		3EC8A68A27831A47009D66A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC8A68927831A47009D66A2 /* SceneDelegate.swift */; };
 		3EC8A69127831A4A009D66A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC8A69027831A4A009D66A2 /* Assets.xcassets */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		15CA4AEE8674006FA045FB39 /* Pods-Blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.debug.xcconfig"; path = "Target Support Files/Pods-Blog/Pods-Blog.debug.xcconfig"; sourceTree = "<group>"; };
+		3E67A52827848634007B196A /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		3E67A52927848634007B196A /* DetailPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPostViewController.xib; sourceTree = "<group>"; };
+		3E67A52C27849218007B196A /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		3E67A52D27849218007B196A /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		3E67A5322784986F007B196A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3E67A53627849BE4007B196A /* DetailPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewModel.swift; sourceTree = "<group>"; };
 		3EC8A68427831A47009D66A2 /* Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC8A68727831A47009D66A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EC8A68927831A47009D66A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +78,17 @@
 				4DD74A2D698454539FA6B254 /* Pods_Blog.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E67A527278485CC007B196A /* DetailPost */ = {
+			isa = PBXGroup;
+			children = (
+				3E67A52827848634007B196A /* DetailPostViewController.swift */,
+				3E67A52927848634007B196A /* DetailPostViewController.xib */,
+				3E67A52C27849218007B196A /* CommentTableViewCell.swift */,
+				3E67A52D27849218007B196A /* CommentTableViewCell.xib */,
+			);
+			path = DetailPost;
 			sourceTree = "<group>";
 		};
 		3EC8A67B27831A47009D66A2 = {
@@ -123,6 +146,7 @@
 		3EC8A6A2278321F7009D66A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E67A527278485CC007B196A /* DetailPost */,
 				3EC8A6A827832385009D66A2 /* Post */,
 			);
 			path = View;
@@ -144,6 +168,7 @@
 			children = (
 				3EC8A6AE278339D4009D66A2 /* Post.swift */,
 				3EC8A6B027833AD8009D66A2 /* User.swift */,
+				3E67A5322784986F007B196A /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				3EC8A6BC27834ACD009D66A2 /* PostViewModel.swift */,
+				3E67A53627849BE4007B196A /* DetailPostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,8 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC8A6AC2783241B009D66A2 /* PostTableViewCell.xib in Resources */,
+				3E67A52B27848634007B196A /* DetailPostViewController.xib in Resources */,
 				3EC8A69F27831F5F009D66A2 /* .swiftlint.yml in Resources */,
 				3EC8A69427831A4A009D66A2 /* LaunchScreen.storyboard in Resources */,
+				3E67A52F27849218007B196A /* CommentTableViewCell.xib in Resources */,
 				3EC8A69127831A4A009D66A2 /* Assets.xcassets in Resources */,
 				3EC8A6C027834CC9009D66A2 /* PostViewController.xib in Resources */,
 			);
@@ -322,10 +350,14 @@
 				3EC8A68827831A47009D66A2 /* AppDelegate.swift in Sources */,
 				3EC8A6B127833AD8009D66A2 /* User.swift in Sources */,
 				3EC8A6C127834CC9009D66A2 /* PostViewController.swift in Sources */,
+				3E67A53727849BE4007B196A /* DetailPostViewModel.swift in Sources */,
 				3EC8A6BA27834790009D66A2 /* NetworkService.swift in Sources */,
 				3EC8A68A27831A47009D66A2 /* SceneDelegate.swift in Sources */,
+				3E67A52E27849218007B196A /* CommentTableViewCell.swift in Sources */,
+				3E67A5332784986F007B196A /* Comment.swift in Sources */,
 				3EC8A6AB2783241B009D66A2 /* PostTableViewCell.swift in Sources */,
 				3EC8A6B72783462B009D66A2 /* ApiCall.swift in Sources */,
+				3E67A52A27848634007B196A /* DetailPostViewController.swift in Sources */,
 				3EC8A6AF278339D4009D66A2 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

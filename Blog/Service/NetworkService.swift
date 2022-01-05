@@ -38,4 +38,17 @@ class NetworkService {
                 }
             }
     }
+    
+    func getComments(completion: @escaping (Result<[Comment], Error>) -> Void) {
+        AF.request(Endpoints.getComments.url, method: .get, headers: ApiCall.nonAuthHeaders)
+            .validate()
+            .responseDecodable(of: [Comment].self) { response in
+                switch response.result {
+                case .success(let result):
+                    completion(.success(result))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }

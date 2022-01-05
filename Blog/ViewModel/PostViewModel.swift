@@ -42,7 +42,8 @@ class PostViewModel {
                     title: post.title,
                     body: post.body,
                     user: user.name,
-                    company: user.company.name
+                    company: user.company.name,
+                    userId: user.id
                 )
                 self?.listPost.value.append(postList)
             case .failure(let error):
